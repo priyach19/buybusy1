@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+// react router
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
+// custom context provider (authentication and product)
+import { AuthContext } from "./authContext";
+import Navbar from "./components/Navbar/Navbar"
+import Home from "./pages/Home/Home";
+import {SignUp} from "./pages/SignUp"
+import Error from './pages/Error';
+import MyOrder from "./pages/MyOrder/MyOrder";
+import Cart from "./pages/Cart/Cart"
+import SignIn from "./pages/SignIn/SignIn"
+import { ProductContext } from "./productContext";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    //all the link routes
+    const router=createBrowserRouter([
+      {path:"/",
+      element:<Navbar/>,
+      errorElement:<Error/>,
+      children:[
+        {index:true,element:<Home/>  },
+        { path:"/myorder", element: <MyOrder />},
+        { path:"/cart", element: <Cart />},
+        { path:"/signin", element: <SignIn />},
+        { path:"/signup", element: <SignUp />},
+      ]
+    }
+    ])
+    return (
+      <>
+       {/* custom authContext provider */}
+       <AuthContext>
+        {/* custom product context provider */}
+        <ProductContext>
+          {/* routes */}
+          <RouterProvider router={router} />    
+        </ProductContext>
+      </AuthContext>
+      </>
+    );
 }
 
 export default App;
