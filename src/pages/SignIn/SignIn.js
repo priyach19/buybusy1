@@ -26,8 +26,6 @@ export default function SignIn(){
        // if user signed in redirect to corresponding page
        {status?navigate("/"):navigate("/signin")};  
     }
-
-
     return(
     <>
     <div className={styles.container}>

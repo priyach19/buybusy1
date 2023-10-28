@@ -58,7 +58,6 @@ export function SignUp(){
             </form> 
         </div>
     </div>
-
     </>
     );
 }

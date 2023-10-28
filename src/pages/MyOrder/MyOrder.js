@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 // custom context hook for value (product)
 import { useProductContext } from "../../productContext"
@@ -11,14 +10,11 @@ export default function MyOrder() {
   const { myorders } = useProductContext();
 
   return (
-  
     <>
-    
         {/* main page container */}
         <div className={styles.mainContainer}>
           {/* page heading */}
           <h1 className={styles.orderHeading}>My Orders</h1>
-
           {/* to show message if no order in list */}
           {myorders.length === 0 ? (
             <>

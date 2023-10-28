@@ -1,16 +1,14 @@
 // custom context hook
 import { useAuthValue } from "../../authContext";
 import { useProductContext } from "../../productContext";
-// css styles
 import styles from "../Navbar/Navbar.module.css";
-// import form react router
 import { Outlet, NavLink } from "react-router-dom";
 
 // Navbar Component
 export default function Navbar() {
   // user's login status
   const { isLoggedIn, signOut } = useAuthValue();
-  const {itemInCart} =useProductContext()
+  const { itemInCart } = useProductContext();
   return (
     <>
       {/* main container */}
@@ -20,7 +18,7 @@ export default function Navbar() {
           <NavLink to="/">
             {/* logo of the app */}
             <i class="fa-solid fa-store"></i>
-            Buy Busy
+            Buy Busy I
           </NavLink>
         </div>
 
@@ -37,7 +35,6 @@ export default function Navbar() {
           {isLoggedIn && (
             <NavLink to="/myorder">
               <span>
-                <i class="fa-solid fa-bag-shopping"></i>
                 Orders
               </span>
             </NavLink>
@@ -48,8 +45,9 @@ export default function Navbar() {
             <NavLink to="/cart">
               <span>
                 <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                <sup><strong>{itemInCart}</strong></sup>
-                
+                <sup>
+                  <strong>{itemInCart}</strong>
+                </sup>
               </span>
             </NavLink>
           )}
@@ -64,9 +62,7 @@ export default function Navbar() {
                 </>
               ) : (
                 <>
-                  <i class="fa-solid fa-right-from-bracket"></i>
-
-                  <span onClick={signOut}>SignOut</span>
+                  <span onClick={signOut}>Logout</span>
                 </>
               )}
             </span>

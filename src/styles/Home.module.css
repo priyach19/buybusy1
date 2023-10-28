@@ -120,13 +120,22 @@
 .mainPage{
     width:90%;
     height:auto;
-    margin: auto;
+    margin-left:100px;
 
 }
 .aside{
-    margin-top: 100px;
+    margin-top: 120px;
+    margin-left:10px;
+
     float:left;
     width:10%;
     height:auto;
+    position:fixed;
 
+}
+.filterbtn{
+    border:2px solid magenta;
+    padding:10px;
+    color:#930993;
+    background-color: none;
 }

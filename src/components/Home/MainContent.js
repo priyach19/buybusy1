@@ -1,4 +1,3 @@
-// import styles
 import styles from "../../styles/Home.module.css";
 // import component to render a single item in the list
 import ItemCard from "./ItemCard";
@@ -9,10 +8,8 @@ import { useProductContext } from "../../productContext";
 export default function MainContent(props) {
   // values form props to filter list
   const { search, price, category, applyFilter } = props;
-
   // product data
   const { data } = useProductContext();
-
   return (
     <div className={styles.itemContainer}>
       {/* filter on the basis of search bar */}

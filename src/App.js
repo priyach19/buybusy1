@@ -32,7 +32,6 @@ function App() {
        <AuthContext>
         {/* custom product context provider */}
         <ProductContext>
-          {/* routes */}
           <RouterProvider router={router} />    
         </ProductContext>
       </AuthContext>
