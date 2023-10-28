@@ -1,7 +1,7 @@
 # BuyBusy App
-This is a react project BuyBusy e-com website, made using Reactjs, Redux toolkit, react-router-dom. User have to create their account to buy the products. Here they can and add/remove products in their cart and also can place order. This project usese Firebase as Database to store the data.
+This is a react project BuyBusy e-com website, made using Reactjs, react-router-dom. User have to create their account to buy the products. Here they can and add/remove products in their cart and also can place order. This project usese Firebase as Database to store the data.
 #### Tech stack used:
-- Reactjs, Redux-toolkit, react-router-dom, react-toastify, JavaScript, CSS.
+- Reactjs, react-router-dom, react-toastify, JavaScript, CSS.
 
 
 ## Following are the steps to run the code on your system:
